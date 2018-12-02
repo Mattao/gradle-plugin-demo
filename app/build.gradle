@@ -1,6 +1,16 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.matao.demoplugin'
 
+/**
+ *  This closure changes the `name` field of DemoExtension
+ *  After execute `./gradlew`, the terminal will output `name in DemoPlugin: hello`
+ *  if you remove this closure, the output result is `name in DemoPlugin: DemoExtension`
+ *  due to the default value of `name` is `DemoExtension`
+ */
+demoExtension {
+    name 'hello'
+}
+
 android {
     compileSdkVersion 28
     defaultConfig {
