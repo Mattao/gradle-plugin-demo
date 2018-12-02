@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.matao.demoplugin'
 
 android {
     compileSdkVersion 28
